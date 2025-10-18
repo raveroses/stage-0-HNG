@@ -27,22 +27,23 @@
             src="https://res.cloudinary.com/diptafc1s/image/upload/v1760745235/realestae_grepny.jpg"
             alt="user-image"
             data-testid="test-user-avatar"
+            loading="lazy"
           />
         </figure>
         <header class="user-header">
           <h2 data-testid="test-user-name">Odekunle Waris Titilope</h2>
-          <p data-testid="test-user-bio">
+          <p data-testid="test-user-bio" class="bio">
             I am a Frontend developer and a Real estate consultant based in
             Ibadan
           </p>
 
           <p data-testid="test-user-time" class="user-time">
             <i class="fa-solid fa-alarm-clock"></i>
-            <span> 1111111 </span>
+            <span class="time"> 1111111 </span>
           </p>
           <nav data-testid="test-user-social-links" class="social-links">
             <a
-              href=""
+              href="https://www.linkedin.com/in/diamond-stack-62a0b62a7/"
               target="_blank"
               rel="noopener no-referrer"
               data-testid="test-user-social-linkedin"
@@ -50,7 +51,7 @@
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a
-              href=""
+              href="https://x.com/TitilopeNode"
               target="_blank"
               rel="noopener no-referrer"
               data-testid="test-user-social-twitter"
@@ -58,7 +59,7 @@
               <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a
-              href=""
+              href="https://web.facebook.com/waris.titilope.odekunle"
               target="_blank"
               rel="noopener no-referrer"
               data-testid="test-user-social-facebook"
@@ -66,7 +67,7 @@
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <a
-              href=""
+              href="https://github.com/raveroses"
               target="_blank"
               rel="noopener no-referrer"
               data-testid="test-user-social-github"
@@ -88,28 +89,18 @@
           </p>
         </div>
         <div class="secondsub">
-        <section>
-              <ul class="hobbiesList"></ul>
-        </section>
+          <section class="list-section">
+            <ul class="hobbiesList" data-testid="test-user-hobbies">
+              <h2>Hobbies</h2>
+            </ul>
+            <ul class="dislikeList" data-testid="test-user-dislikes">
+              <h2>Dislike</h2>
+            </ul>
+          </section>
         </div>
       </div>
     </article>
 
-    <script>
-      const hobbiesUnOrderedList = document.querySelector(".hobbiesList");
-      const hobbiesList = [
-        "Listening to Music",
-        "Reading Entertainment news",
-        "Learning",
-        "Playing",
-      ];
-
-      const mapping = hobbiesList.forEach((list) => {
-        const creationofList = document.createElement("li");
-        creationofList.textContent = list;
-        creationofList.style.padding = "0px";
-        hobbiesUnOrderedList.appendChild(creationofList);
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
