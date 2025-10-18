@@ -4,10 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>profile card</title>
   </head>
   <body>
+    <article data-testid="test-profile-card" class="general-container">
+      <div class="oneside">
+        <figure class="image-container">
+          <img
+            src="https://res.cloudinary.com/diptafc1s/image/upload/v1760745235/realestae_grepny.jpg"
+            alt="user-image"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+        <header class="user-header">
+          <h2 data-testid="test-user-name">Odekunle Waris Titilope</h2>
+          <p data-testid="test-user-bio">
+            I am a Frontend developer and a Real estate consultant based in
+            Ibadan
+          </p>
 
-    
+          <p data-testid="test-user-time" class="user-time">
+            <i class="fa-solid fa-alarm-clock"></i>
+            <span> 1111111 </span>
+          </p>
+          <nav data-testid="test-user-social-links" class="social-links">
+            <a
+              href=""
+              target="_blank"
+              rel="noopener no-referrer"
+              data-testid="test-user-social-linkedin"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener no-referrer"
+              data-testid="test-user-social-twitter"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener no-referrer"
+              data-testid="test-user-social-facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener no-referrer"
+              data-testid="test-user-social-github"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </nav>
+        </header>
+      </div>
+
+      <div class="secondside">
+        <div class="firstsub">
+          <h2>Hi there!</h2>
+          <p data-testid="test-user-bio" class="text-bio">
+            As a frontend developer with hands-on experience building scalable,
+            responsive, and SEO-friendly web applications, I bring both
+            technical expertise and a product-focused mindset to every project I
+            work on.
+          </p>
+        </div>
+        <div class="secondsub">
+        <section>
+              <ul class="hobbiesList"></ul>
+        </section>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      const hobbiesUnOrderedList = document.querySelector(".hobbiesList");
+      const hobbiesList = [
+        "Listening to Music",
+        "Reading Entertainment news",
+        "Learning",
+        "Playing",
+      ];
+
+      const mapping = hobbiesList.forEach((list) => {
+        const creationofList = document.createElement("li");
+        creationofList.textContent = list;
+        creationofList.style.padding = "0px";
+        hobbiesUnOrderedList.appendChild(creationofList);
+      });
+    </script>
   </body>
 </html>
