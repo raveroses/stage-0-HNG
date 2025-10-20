@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article class="contact-container">
+      <nav>
+        <a href="/index.html"> Home </a>
+        <a href="/about.html"> About </a>
+      </nav>
+
+      <div class="contact">
+        <h3>Contact us</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
+          voluptate facilis labore dignissimos quam sapiente corporis nulla
+          iusto possimus culpa id tempore, fuga neque suscipit perferendis
+          tempora repudiandae quis animi!
+        </p>
+      </div>
+
+      <div class="service">
+        <form>
+          <div data-testid="test-contact-name">
+            <label for="fullName">FullName</label>
+            <input type="text" name="fullName" id="fullName" />
+            <p class="errorMessage"></p>
+          </div>
+
+          <div data-testid="test-contact-email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <p class="errorMessage"></p>
+          </div>
+          <div data-testid="test-contact-subjec">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" required />
+            <p class="errorMessage"></p>
+          </div>
+          <div data-testid="test-contact-message">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required></textarea>
+            <p class="errorMessage"></p>
+          </div>
+          <div data-testid=" test-contact-submit">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <div class="service-image">
+          <img src="/image/service.jpg" alt="s4/7 service" />
+        </div>
+      </div>
+    </article>
+
+    <script>
+      //       Validation rules:
+      //  All fields required.
+      //  Email must be valid (name@example.com).
+      //  Message must be at least 10 characters.
+      //  On success, show a confirmation message.
+
+      // Accessibility:
+      //  All inputs must have <label>s linked with for.
+      //  Error messages must be tied to inputs with aria-describedby.
+      //  Entire form must be keyboard accessible.
+      const isEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+      const inputs = document.querySelectorAll("form div input");
+
+      inputs.forEach((input) => {
+        input.addEventListener("input", () => {
+          const inputValue = input.value.trim();
+          console.log(`${input.name}: ${inputValue}`);
+        });
+      });
+      console.log(inputs);
+    </script>
+  </body>
+</html>
