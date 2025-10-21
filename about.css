@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+main {
+  padding: 40px 200px;
+  color: white;
+}
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar nav {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar nav a:hover {
+  text-decoration: underline;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  width: 100%;
+  margin-top: 100px;
+}
+.bio-about {
+  width: 60%;
+}
+
+.bio-about h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.bio-about p {
+  font-size: 18px;
+}
+.bio div {
+  width: 40%;
+}
+.image img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.bio-about ul {
+  padding-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .bio {
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+    margin-top: 50px;
+  }
+  .bio-about {
+    width: 100%;
+  }
+  .bio div {
+    width: 100%;
+  }
+  main {
+    padding: 40px 10px;
+  }
+  .image img {
+    display: none;
+  }
+}
+@media (min-width: 801px) and (max-width: 1023px) {
+  .bio {
+    gap: 40px;
+  }
+  main {
+    padding: 40px 20px;
+  }
+
+  .bio-about {
+    width: 50%;
+  }
+  .bio div {
+    width: 50%;
+  }
+}

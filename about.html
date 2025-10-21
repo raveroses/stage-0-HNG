@@ -3,9 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" />
     <title>Document</title>
   </head>
   <body>
-    <article>About</article>
+    <main data-testid="test-about-page">
+      <div class="navbar">
+        <h3>Odekunle Waris</h3>
+        <nav>
+          <a href="/index.html"> Home </a>
+          <a href="/contact.html"> Contact </a>
+        </nav>
+      </div>
+
+      <section class="bio" data-testid="test-about-bio">
+        <div class="bio-about">
+          <h2>Bio</h2>
+          <p>
+            As a frontend developer with hands-on experience building scalable,
+            responsive, and SEO-friendly web applications, I bring both
+            technical expertise and a product-focused mindset to every project I
+            work on.
+          </p>
+        </div>
+        <div class="image">
+          <img src="/image/realestae .jpg" alt="about image" />
+        </div>
+      </section>
+      <section class="bio" data-testid="test-about-goals">
+        <div class="image">
+          <img src="/image/goal.jpeg" alt="about image" />
+        </div>
+
+        <div class="bio-about">
+          <h2>Goals in this Program</h2>
+          <ul>
+            <li>Develop my frontend engingeering skill</li>
+            <li>Collaborating with others developers</li>
+            <li>Confidence building</li>
+          </ul>
+        </div>
+      </section>
+      <section class="bio" data-testid="test-about-confidence">
+        <div class="bio-about">
+          <h2>Areas of low confidence</h2>
+          <ul>
+            <li>API Integration</li>
+            <li>Complex state Management</li>
+            <li>Supabase complexity</li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="/image/confidence.jpeg" alt="about image" />
+        </div>
+      </section>
+      <section class="bio" data-testid="test-about-future-note">
+        <div class="image">
+          <img src="/image/future.jpeg" alt="about image" />
+        </div>
+        <div class="bio-about">
+          <h2>Note to future self</h2>
+
+          <p>
+            Dear Abdul Warith, This is for you my guy,keep learning, keep
+            pushing and the world is awaiting for your result. You can build
+            things that will solve problem, espectially in real estate.Also, You
+            will secure international internship and work.I trust you!!!
+          </p>
+        </div>
+      </section>
+      <section class="bio" data-testid="test-about-extra">
+        <div class="bio-about">
+          <h2>Extra thoughts</h2>
+
+          <p>
+            Juggling real estate and programming hasn't been easy. but Im really
+            grateful for life and also appreciate HNG for the opportunity to
+            join the amazing programme which i know i will triumph.
+          </p>
+        </div>
+        <div class="image">
+          <img src="/image/thought.jpeg" alt="about image" />
+        </div>
+      </section>
+    </main>
+
+    <script>
+      //       A reflective page where you share your thoughts.
+      // Required sections (data-testid for each):
+      //  Bio — test-about-bio
+      //  Goals in this program — test-about-goals
+      //  Areas of low confidence — test-about-confidence
+      //  Note to future self — test-about-future-note
+      //  Extra thoughts — test-about-extra
+
+      // Semantic structure:
+      //  Wrap with <main data-testid="test-about-page">.
+      //  Use <section> for each area.
+      //  Use proper headings (<h2>, <h3>) for clarity.
+    </script>
   </body>
 </html>
