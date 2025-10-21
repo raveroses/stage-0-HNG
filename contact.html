@@ -28,23 +28,23 @@
         <form>
           <div data-testid="test-contact-name">
             <label for="fullName">FullName</label>
-            <input type="text" name="fullName" id="fullName" require />
+            <input type="text" name="fullName" id="fullName" aria-describedby="fullNameerrorMessage" required />
             <p class="fullNameerrorMessage" id="errorMessage"></p>
           </div>
 
           <div data-testid="test-contact-email">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" require />
+            <input type="email" name="email" id="email" aria-describedby="emailerrorMessage" required />
             <p class="emailerrorMessage" id="errorMessage"></p>
           </div>
-          <div data-testid="test-contact-subjec">
+          <div data-testid="test-contact-subject">
             <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" require />
+            <input type="text" name="subject" id="subject" aria-describedby="subjecterrorMessage" required />
             <p class="subjecterrorMessage" id="errorMessage"></p>
           </div>
           <div data-testid="test-contact-message">
             <label for="message">Message</label>
-            <textarea name="message" id="message" require></textarea>
+            <textarea name="message" id="message" aria-describedby="messageerrorMessage" required></textarea>
             <p class="messageerrorMessage" id="errorMessage"></p>
           </div>
           <div data-testid=" test-contact-submit">
